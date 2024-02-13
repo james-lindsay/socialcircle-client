@@ -20,7 +20,7 @@ import {
   Menu,
   Close,
 } from "@mui/icons-material";
-import { UseDispatch, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "state";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "components/FlexBetween";
@@ -34,11 +34,10 @@ const Navbar = () => {
   const theme = useTheme();
   const neutralLight = theme.palette.neutral.light;
   const dark = theme.palette.neutral.dark;
-  const background = theme.palette.neutral.background.default;
+  const background = theme.palette.background.default;
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
-
-  const fullName = `${user.firstname}${user.lastName}`;
+  const fullName = `${user.firstName}${user.lastName}`;
 
   return (
     <FlexBetween padding="1rem 6&" backgroundColor={alt}>
@@ -55,7 +54,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopidia
+          Social Circle
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
